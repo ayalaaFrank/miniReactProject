@@ -1,0 +1,40 @@
+
+body{
+  text-align: center;
+  direction: rtl;
+  background-color: rgb(0, 0, 0);
+    /* // background: "rgba(193, 154, 107, 0.79)", */
+
+
+}
+/* main {
+
+} */
+
+/* main div {
+  padding: 10rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} */
+
+/* body {
+  display: flex; 
+  padding: 5rem;
+background-color:rgb(189, 189, 189) 
+} */
+
+/* .page {
+  flex-grow:1
+} */
+
+/* .coin {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+} */
