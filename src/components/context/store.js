@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 
 function CreateStore() {
   const [users, setUsers] = useState([
-    { id: 1, name: 'admin', email: 'admin@gmail.com', password: '123456', role: 'admin' },
+    { id: 1, name: 'admin', email: 'admin@gmail.com', password: '123456', role: 'manager' },
     { id: 2, name: 'user', email: 'user@gmail.com', password: '123456', role: 'user' },
   ]);
   const [currentUser, setCurrentUser] = useState(null);

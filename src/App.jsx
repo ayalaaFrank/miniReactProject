@@ -54,13 +54,13 @@ function App() {
             <Link style={linkStyle} to="home">דף הבית</Link>
             <Link style={linkStyle} to="about">אודות</Link>
             <Link style={linkStyle} to="dishList">המנות שלנו</Link>
-            {currentUser ? (<><div style={linkStyle} onClick={logout}> יציאה ({currentUser.name}) </div></>
-            ) : (
-              <>
+            {currentUser ? (<><div style={linkStyle} onClick={logout}> יציאה ({currentUser.name}) </div></>) : (
+            <>
                 <Link style={linkStyle} to="login">כניסה</Link>
                 <Link style={linkStyle} to="register">הרשמה</Link>
               </>
             )}
+           {currentUser?.role=="manager" && <Link style={linkStyle} to="/manager">ניהול תפריט</Link>}
             <Link style={linkStyle} to="cart">
               <img src={"/images/wagon.png"} style={{ width: '35px', height: '35px' }} alt="עגלה" />
             </Link>
