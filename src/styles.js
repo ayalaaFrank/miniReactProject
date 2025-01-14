@@ -2,16 +2,14 @@
 export const navStyle = {
     display: "flex",
     justifyContent: "space-around",
-    // padding: "10px 10px",
+    paddingLeft: "140px",
+    paddingRight: "120px",
     paddingTop: "18px",
     position: "sticky",
     top: "0",
     zIndex: 10,
-    backgroundColor: "transparent", // ��� ���
-    fontSize: "1.3rem",
-    // background: "rgba(193, 154, 107, 0.79)",
-    // background: "black",
-
+    backgroundColor: "transparent", 
+    fontSize: "1.2rem",
 };
 // עיצוב דף הבית
 export const homeImg = {
@@ -68,16 +66,14 @@ export const homeStyle = {
 export const linkStyle = {
     color: "#fff",
     textDecoration: "none",
-    // fontWeight: "bold"
     marginTop: "10px",
 };
 // עיצוב הפסקה באודות
 export const pStyle = {
-    fontSize: "1.1rem",
+    fontSize: "1rem",
     color: "#fff",
     textAlign: "right",
     marginRight: "30px",
-    // paddingTop: "10px",
 };
 // עיצוב עמוד כללי - אודות
 export const aboutDiv = {
@@ -86,20 +82,22 @@ export const aboutDiv = {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "20px",
-    fontSize: "1rem",
-    background: "rgba(193, 154, 107, 0.79)",
-    marginLeft: "100px",
-    marginRight: "100px",
+    fontSize: "0.8rem",
+    // background: "rgba(193, 154, 107, 0.79)",
+    marginLeft: "150px",
+    marginRight: "150px",
     borderRadius: "10px",
+    color:"rgba(193, 154, 107, 0.79)",
   
 };
+//עיצוב טופס יצירת קשר
 export const formStyle = {
     container: {
         backgroundColor: "#2c2c2c",
         padding: "30px",
         borderRadius: "15px",
         boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)",
-        maxWidth: "700px",
+        maxWidth: "500px",
         margin: "30px auto",
         textAlign: "center",
     },
@@ -136,10 +134,11 @@ export const formStyle = {
     },
 };
 
-
+//עיצוב עמוד מנות
 export const dishListStyle = {
     display: "flex",
-    flexDirection: "row", // 
+    flexWrap: "wrap",
+    flexDirection: "row", 
     justifyContent: "space-around",
     alignItems: "center",
 
@@ -149,11 +148,12 @@ export const cardContainerStyle = {
     alignItems: "center",
     padding: "45px",
     width: "20rem",
-    // height: "20rem",
+    height: "17rem",
     boxShadow: "0px 0px 10px gray",
     color: "#fff",
     borderRadius: "10px",
-    margin: "10px",
+    margin: "15px",
+    marginBottom: "25px"
     //background: "rgba(193, 154, 107, 0.79)",
 };
 export const cardImgStyle = {
@@ -162,32 +162,6 @@ export const cardImgStyle = {
     
 };
 
-export const cartPopupStyle = {
-    position: "fixed",
-    top: "50px",
-    left: "0",
-    width: "300px",
-    // background: "white",
-    border: "1px solid #ddd",
-    boxShadow: "0px 4px 6px rgba(235, 211, 211, 0.1)",
-    padding: "20px",
-    zIndex: 1000,
-    borderRadius: "8px",
-    color: "white",
-
-};
-
-export const closeButtonStyle = {
-    background: "white",
-    color: "black",
-    border: "none",
-    padding: "5px 10px",
-    cursor: "pointer",
-    float: "right",
-    marginTop: "-10px",
-    marginRight: "-10px",
-    borderRadius: "50%",
-};
 export const btnDitels = {
     background: "white",
     width: "30%",
@@ -210,8 +184,8 @@ export const detailsStyle = {
         padding: "30px",
         borderRadius: "10px",
         boxShadow: "0px 4px 50px rgba(255, 254, 254, 0.45)",
-        margin: "25px auto",
-        width: "40%",
+        margin: "73px auto",
+        width: "50%",
         height: "350px",
     },
     image: {
@@ -223,8 +197,13 @@ export const detailsStyle = {
     details: {
         flex: 1,
         marginLeft: "20px",
-        textAlign: "center",    
-
+        textAlign: "center",
+    },
+    buttonsContainer: {
+        display: "flex", // יוצר סידור בשורה
+        justifyContent: "center", // מרכז את הכפתורים
+        gap: "10px", // מוסיף רווח בין הכפתורים
+        marginTop: "20px",
     },
     button: {
         backgroundColor: "#fff",
@@ -234,74 +213,181 @@ export const detailsStyle = {
         borderRadius: "5px",
         cursor: "pointer",
         fontSize: "1rem",
+        height: "40px",
     },
 };
-
+//עיצוב דף עגלה
 export const cartContainer = {
     padding: "20px",
-    backgroundColor: "#1a1a1a",
-    borderRadius: "15px",
-    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)",
+    backgroundColor: "#000", // רקע שחור בולט
+    borderRadius: "10px",
     maxWidth: "800px",
     margin: "30px auto",
-  };
-  
-  export const headerStyle = {
-    color: "#fff",
-    backgroundColor: "rgba(193, 154, 107, 0.79)",
+    fontFamily: "'Arial', sans-serif", // גופן נקי ומודרני
+    color: "#fff", // טקסט לבן
+    boxShadow: "0 4px 15px rgba(0, 0, 0, 0.7)", // הצללה עדינה
+};
+
+export const headerStyle = {
+    color: "rgba(193, 154, 107, 0.79)", // כותרת בצבע חום
     textAlign: "center",
-    padding: "15px",
-    borderRadius: "10px",
-    marginBottom: "20px",
-    fontSize: "1.8rem",
-  };
-  
-  export const tableStyle = {
+    padding: "10px",
+    fontSize: "2rem",
+    fontWeight: "bold",
+    borderBottom: "2px solid rgba(193, 154, 107, 0.79)", // קו תחתון מודגש לחלק העליון
+};
+
+export const tableStyle = {
     width: "100%",
-    margin: "0 auto",
+    marginTop: "20px",
     borderCollapse: "collapse",
-    backgroundColor: "#2c2c2c",
-    borderRadius: "10px",
-    overflow: "hidden",
-  };
-  
-  export const tableHeader = {
-    backgroundColor: "rgba(193, 154, 107, 0.79)",
-    color: "#fff",
-    fontSize: "1.2rem",
-  };
-  
- export const rowStyle = {
+    color: "#fff", // טקסט לבן בטבלה
+};
+
+export const tableHeader = {
+    backgroundColor: "rgba(193, 154, 107, 0.79)", // רקע חום
+    color: "#000", // טקסט שחור לכותרות
+    fontSize: "1.1rem",
+    fontWeight: "bold",
+    padding: "15px", // הגדלת מרווח בכותרות
     textAlign: "center",
-    color: "#fff",
-    borderBottom: "1px solid #444",
-  };
-  
-  export const btnRemove = {
-    backgroundColor: "#e63946",
-    color: "#fff",
+};
+
+export const rowStyle = {
+    borderBottom: "1px solid rgba(255, 255, 255, 0.2)", // קו עדין בין השורות
+    textAlign: "center",
+    padding: "20px", // הגדלת מרווח בשורות
+    fontSize: "1rem",
+};
+
+export const btnRemove = {
+    backgroundColor: "rgba(193, 154, 107, 0.79)", // צבע חום
+    color: "#000", // טקסט שחור
     border: "none",
     borderRadius: "5px",
-    padding: "5px 10px",
+    padding: "5px 15px",
     cursor: "pointer",
-  };
-  
- export const totalContainer = {
+    fontWeight: "bold",
+    fontSize: "0.9rem",
+    transition: "background-color 0.3s",
+};
+
+export const btnRemoveHover = {
+    backgroundColor: "#b38d6e", // גוון כהה יותר לחיצה
+};
+
+export const totalContainer = {
     textAlign: "center",
-    margin: "20px auto",
-    color: "#fff",
-  };
-  
-  export const totalStyle = {
-    color: "rgba(193, 154, 107, 0.79)",
-    fontSize: "1.5rem",
-  };
-  export const btnPay = {
-    background: "white",
-    width: "30%",
-    height: "30px",
-    borderRadius: "10px",
-    boxShadow: "0px 4px 6px rgba(235, 211, 211, 0.1)",
-    fontSize: "large",
+    marginTop: "20px",
+    color: "#fff", // סכום בטקסט לבן
+    fontSize: "1.2rem",
+    fontWeight: "bold",
+};
+
+export const btnPay = {
+    backgroundColor: "rgba(193, 154, 107, 0.79)", // צבע חום
+    color: "#000", // טקסט שחור
+    border: "none",
+    borderRadius: "50px", // עיצוב עגול יותר
+    padding: "10px 25px", // כפתור יותר גדול ובולט
+    fontSize: "1.2rem",
     cursor: "pointer",
-}
+    transition: "transform 0.2s, background-color 0.3s",
+    textDecoration: "none",
+    
+    
+};
+
+export const btnPayHover = {
+    backgroundColor: "#b38d6e", // שינוי גוון בלחיצה
+    transform: "scale(1.05)", // אפקט הגדלה קל בלחיצה
+    boxShadow: "0 6px 15px rgba(193, 154, 107, 0.8)", // הצללה מודגשת יותר בלחיצה
+};
+//עיצוב טופב התחברות והרשמה
+export const formStyle2 = {
+    container: {
+        backgroundColor: "#fff", // רקע בהיר ונקי
+        padding: "10px 40px", // יותר רווח
+        borderRadius: "10px", // רדיוס פינות קצת יותר גדול
+        boxShadow: "0 12px 24px rgba(87, 81, 81, 0)", // הצללה יותר מודגשת
+        maxWidth: "300px", // טופס בינוני
+        margin: "50px auto", 
+        textAlign: "center",
+        fontFamily: "'Poppins', sans-serif",
+    },
+    input: {
+        width: "90%",
+        padding: "13px",
+        margin: "3px 0",
+        border: "2px solid rgba(193, 154, 107, 0.79)", // גבול עדין
+        borderRadius: "8px",
+        fontSize: "1rem",
+        backgroundColor: "#f6f6f6", // רקע עדין בשדות
+        color: "#333", 
+        outline: "none",
+        transition: "border-color 0.3s, transform 0.3s ease-in-out", // אנימציה רכה
+    },
+    inputFocus: {
+        borderColor: "#5d76f2", // צבע כחול דומיננטי כשיש פוקוס
+        transform: "scale(1.03)", // התפשטות קלה כדי למשוך תשומת לב
+    },
+    button: {
+        backgroundColor: "rgba(193, 154, 107, 0.79)", // כחול אלגנטי
+        color: "#fff", // טקסט בהיר
+        border: "none",
+        borderRadius: "8px", // פינות מעוגלות
+        padding: "15px 30px", 
+        margin: "10px 0",
+        fontSize: "1.1rem",
+        fontWeight: "600", // טקסט מודגש
+        cursor: "pointer",
+        transition: "background-color 0.3s, transform 0.3s, box-shadow 0.3s", // אנימציה חלקה עם הצללה
+    },
+    buttonHover: {
+        backgroundColor: "#4b63e4", // גוון כחול כהה יותר בעת hover
+        transform: "scale(1.05)", // הגדלה עדינה בעת hover
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)", // הצללה רכה בזמן hover
+    },
+    errorMessage: {
+        color: "#e63946", // צבע אדום להדגשה
+        fontSize: "1rem",
+        fontWeight: "500",
+        marginTop: "10px",
+        textAlign: "center",
+    },
+    
+};
+//עיצוב דף רכישה
+export const purchaseStyles = {
+    wrapper: {
+      backgroundColor: "#fff",
+      padding: "20px 40px",
+      borderRadius: "10px",
+      boxShadow: "0 12px 24px rgba(87, 81, 81, 0.2)",
+      maxWidth: "400px",
+      margin: "50px auto",
+      textAlign: "center",
+      fontFamily: "'Poppins', sans-serif",
+    },
+    paymentSummary: {
+      fontSize: "1.5rem",
+      margin: "20px 0",
+      color: "#333",
+    },
+    payButton: {
+      backgroundColor: "rgba(193, 154, 107, 0.79)",
+      color: "#fff",
+      border: "none",
+      borderRadius: "8px",
+      padding: "15px 30px",
+      fontSize: "1.1rem",
+      fontWeight: "600",
+      cursor: "pointer",
+      transition: "background-color 0.3s, transform 0.3s, box-shadow 0.3s",
+    },
+    payButtonHover: {
+      backgroundColor: "#a67c52",
+      transform: "scale(1.05)",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.2)",
+    },
+  };

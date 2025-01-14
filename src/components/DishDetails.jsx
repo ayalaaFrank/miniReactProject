@@ -1,10 +1,20 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { detailsStyle  } from "../styles";
 
 function DishDetails({addDish}) {
 
+    
+    const navigate = useNavigate(); // יצירת פונקציה לניווט
 
+    const handleToDishList = () => {
+        navigate("/dishList"); // ניווט חזרה לרשימת המנות
+      };
+
+      const handlToCart = () => {
+        navigate("/cart"); // ניווט חזרה לרשימת המנות
+      };
+      
     const {id,name,details,price,img}= useParams();
 
     const handleAddToCart = ()=>{
@@ -18,15 +28,22 @@ function DishDetails({addDish}) {
             <div style={detailsStyle.details}>
                 <h1>פרטי המנה:</h1>
                 <p>{details}</p>    
-                {/* <p>מספר המנה הוא {id}</p> */}
                 <p>מחיר המנה: {price}</p>
-                <button style={detailsStyle.button} onClick={handleAddToCart}> הוסף מנה לסל
-                </button>
-                   {/* <button style={detailsStyle.button}>
-                    הוסף מנה לסל
-                </button> */}
+                <div style={detailsStyle.buttonsContainer}>
+                    <button style={detailsStyle.button} onClick={handleAddToCart}>
+                        הוסף מנה לסל
+                    </button>
+                    <button style={detailsStyle.button} onClick={handleToDishList}>
+                        המשך קנייה
+                    </button>
+                    <button style={detailsStyle.button} onClick={handlToCart}>
+                        <img src={"/images/cart.jpg"} style={{ width: '25px', height: '25px' }} alt="עגלה" />
+                    </button>
+                </div>
             </div>
         </div>
+    
+    
     );
 }
 

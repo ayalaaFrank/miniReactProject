@@ -3,7 +3,7 @@ import { aboutDiv } from "../styles";
 
 function About() {
     return <>
-        <h1 style={{ color: '#fff' }}>About</h1>
+        <h1 style={{ color: '#fff' }}>אודותינו</h1>
         <div style={aboutDiv}>
             <p style={pStyle}> לחם בשר ירושלים
                 מסעדת בשרים כשרה למהדרין <br />
@@ -19,7 +19,7 @@ function About() {
                 ועד צעירים שיוצאים לבלות במתחם בשעות הערב <br />
                 הכשרות בהשגחת הרב מחפוד</p>
 
-            <img src="./images/DP-03150.jpg" alt="" style={{ width: "600px", height: "400px" }} />
+            <img src="./images/DP-03150.jpg" alt="" style={{ width: "500px", height: "300px" }} />
 
         </div>
         <h1 style={{ color: "white" }}>צור קשר</h1>

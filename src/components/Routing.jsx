@@ -9,13 +9,13 @@ import Login from './Login';
 import Register from './register';
 
 
-export const Routing = ({ cart, addDish, removeDish , total,setTotal}) => {
+export const Routing = ({ cart, addDish, removeDish , total,setTotal , dishes,deleteDish}) => {
     return <>
         <Routes >
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/dishList" element={<DishList />} />
-            <Route path="/dishDetails/:id/:name/:details/:price/:img" element={<DishDetails addDish={addDish} />} />
+            <Route path="/dishList" element={<DishList deleteDish={deleteDish} dishes={dishes} />} />
+            <Route path="/dishDetails/:id/:name/:details/:price/:img" element={<DishDetails addDish={addDish}  />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/cart" element={<Cart cart={cart} removeDish={removeDish} addDish={addDish} setTotal={setTotal} />} />

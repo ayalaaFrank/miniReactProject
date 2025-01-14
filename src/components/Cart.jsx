@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { btnPay ,totalContainer ,btnRemove , rowStyle , tableHeader , tableStyle,headerStyle,cartContainer } from "../styles";
 
 function Cart({ cart, removeDish , addDish }) {
+  
   const calculateTotal = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
@@ -17,7 +18,7 @@ function Cart({ cart, removeDish , addDish }) {
             <th>מחיר</th>
             <th>כמות</th>
             <th>סה"כ</th>
-            <th>הסר</th>
+            <th>הסר/הוסף</th>
           </tr>
         </thead>
         <tbody>
@@ -42,7 +43,7 @@ function Cart({ cart, removeDish , addDish }) {
 
       <div style={totalContainer}>
         <h3 style={tableStyle}>סכום כולל: {calculateTotal()} ש"ח</h3>
-        <Link style={{btnPay }} to={`/purchase/${calculateTotal()}`}>
+        <Link style={btnPay} to={`/purchase/${calculateTotal()}`}>
           לתשלום
         </Link>
       </div>
